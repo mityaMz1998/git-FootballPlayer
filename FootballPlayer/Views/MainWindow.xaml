@@ -1,0 +1,35 @@
+﻿<Window x:Class="FootballPlayer.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FootballPlayer.Views"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="250" Width="400">
+    <Window.Background>
+        <ImageBrush ImageSource="/Files/thumb_l_16611.jpg"/>
+    </Window.Background>
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Style.Setters>
+                <Setter Property="Button.HorizontalAlignment" Value="Left"/>
+                <Setter Property="Button.VerticalAlignment" Value="Top"/>
+                <Setter Property="Button.Height" Value="25"/>
+                <Setter Property="Button.Width" Value="120"/>
+            </Style.Setters>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Menu Background="{x:Null}" Foreground="White">
+            <MenuItem Header="Menu">
+                <MenuItem Header="Exit" Foreground="Black" Command="{Binding Path = ExitMainWindowCommand}"/>
+            </MenuItem>
+        </Menu>
+        <Button Grid.Row="1" Command="{Binding Path = OpenPlayerCommand}" Margin="140,50,0,0" Content="Players"/>
+        <Button Grid.Row="1" Command="{Binding Path = OpenClubCommand}" Margin="140,100,0,0" Content="Clubs"/>
+    </Grid>
+</Window>
