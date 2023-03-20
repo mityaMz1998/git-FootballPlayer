@@ -19,7 +19,7 @@ namespace FootballPlayer.ViewModels
         /// </summary>
         public static void LoadCountriesInComboBox(ComboBox comboBox)
         {
-            string basePath = "D:/C#/C# обучение/Разбор тем по C#/repos/WPF/FootballPlayer/FootballPlayer/Files";
+            string basePath = "D:\\C# и JavaScript\\C# обучение\\Разбор тем по C#\\repos\\WPF\\FootballPlayer\\FootballPlayer\\Files";
             string file = "country.csv";
             string stringPath = Path.Combine(basePath, file);
             using (StreamReader sr = new StreamReader(stringPath, Encoding.UTF8))
